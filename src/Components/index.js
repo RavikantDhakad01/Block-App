@@ -6,7 +6,11 @@ import Button from "./Button";
 import Input from "./Input";
 import Logo from './Logo'
 import Select from './Select'
-import Rte from './RTE'
+import RTE from './RTE'
+import Signup from './Signup'
+import Login from './Login'
+import PostForm from './post-form/PostForm'
+import PostCard from './PostCard'
 export {
-    Container, Header, LogoutBtn, Footer, Button, Input, Logo
+    Container, Header, LogoutBtn, Footer, Button, Input, Logo,Select,RTE,Signup,Login,PostForm,PostCard
 }
