@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import service from '../../appwrite/config'
 
 function Home() {
-    const [posts, setPosts] = useEffect([])
+    const [posts, setPosts] = useState([])
 
     useEffect(() => {
         service.getPost().then((posts) => {
