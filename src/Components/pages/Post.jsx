@@ -11,13 +11,13 @@ function Post() {
     const navigate = useNavigate()
     const { slug } = useParams()
     const userData = useSelector((state) => state.auth.user)
-    const isAuthor = post && userData ? userData.$id == post.userId : false
+    const isAuthor = post && userData ? userData.$id === post.userId : false
 
     useEffect(() => {
         if (slug) {
             appwriteService.getPost(slug).then((post) => {
                 if (post) {
-                    setPost(Post)
+                    setPost(post)
                 }
                 else {
                     navigate('/')
