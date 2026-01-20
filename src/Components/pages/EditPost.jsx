@@ -6,7 +6,7 @@ import { PostForm, Container } from '../index'
 function EditPost() {
 
     const navigate = useNavigate()
-    const { slug } = useParams
+    const { slug } = useParams ()
     const [post, setPost] = useState(null)
 
     useEffect(() => {
@@ -20,7 +20,7 @@ function EditPost() {
         else {
             navigate('/')
         }
-    }, [slug])
+    }, [slug,navigate])
     return post ? (
         <div className='py-8'>
             <Container>
