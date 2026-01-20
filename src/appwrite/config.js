@@ -30,7 +30,7 @@ class Service {
         }
     }
 
-    async updatePost(slug,{ title,  content, featuredImage, status }) {
+    async updatePost(slug, { title, content, featuredImage, status }) {
 
         try {
             return await this.databases.updateDocument(
@@ -64,6 +64,9 @@ class Service {
     }
 
     async getPost(slug) {
+        if (!slug) {
+            return null
+        }
         try {
             return await this.databases.getDocument(
                 conf.appwriteDatabaseId,
@@ -72,8 +75,8 @@ class Service {
             )
 
         } catch (error) {
-            console.log("Error in getPost:", error.message);
- return false
+
+            return null
         }
     }
 
@@ -82,15 +85,15 @@ class Service {
             return await this.databases.listDocuments(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
-               [
- Query.equal("status","active"),
- Query.equal("userId",userId)
+                [
+                    Query.equal("status", "active"),
+                    Query.equal("userId", userId)
 
-               ]
+                ]
             )
         } catch (error) {
             console.log("Error in getPosts", error.message);
- return false
+            return false
         }
     }
 
