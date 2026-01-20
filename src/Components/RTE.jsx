@@ -50,3 +50,4 @@ function RTE({ name, label, control, defaultValue = "" }) {
         </div>
     )
 }
+export default RTE
