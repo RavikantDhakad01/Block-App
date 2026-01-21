@@ -20,11 +20,7 @@ function Header() {
          path: '/signup',
          active: !authStatus
       },
-      {
-         name: "All posts",
-         path: '/all-posts',
-         active: authStatus
-      },
+   
       {
          name: "Create post",
          path: '/add-post',
