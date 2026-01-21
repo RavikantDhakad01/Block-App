@@ -6,7 +6,7 @@ function Home() {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        service.getPost().then((posts) => {
+        service.getPosts().then((posts) => {
             if (posts) {
                 setPosts(posts.documents)
             }
@@ -19,7 +19,7 @@ function Home() {
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
                             <h1 className="text-2xl font-bold hover:text-gray-500">
-                                Login to read posts
+                                No post! please create new post to see posts
                             </h1>
                         </div>
                     </div>
@@ -27,8 +27,10 @@ function Home() {
             </div>
         )
     }
-    else {
-        (<div className='w-full py-8'>
+   
+       return (
+
+       <div className='w-full py-8'>
             <Container>
                 <div className='flex flex-wrap'>
                     {
@@ -41,7 +43,8 @@ function Home() {
                 </div>
             </Container>
         </div>
+        
         )
-    }
+    
 }
 export default Home
