@@ -37,7 +37,7 @@ function Login() {
 
                 <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-25">
-                        <Logo width='100%' />
+                        <Logo size='w-20' />
                     </span>
                 </div>
 
