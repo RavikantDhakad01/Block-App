@@ -7,13 +7,13 @@ import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AuthLayout from './Components/AuthLayout'
 
-import Home from './Components/pages/Home'
-import Login from './Components/pages/Login'
-import Signup from './Components/pages/Signup'
-import Post from './Components/pages/Post'
-import AddPost from './Components/pages/AddPost'
-import EditPost from './Components/pages/EditPost'
-import AllPosts from './Components/pages/AllPosts'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+import Post from './pages/Post'
+import AddPost from './pages/AddPost'
+import EditPost from './pages/EditPost'
+
 
 const router = createBrowserRouter([
     {
@@ -45,15 +45,7 @@ const router = createBrowserRouter([
                     </AuthLayout>
                 )
             },
-            {
-                path: "/all-posts",
-                element: (
-                    <AuthLayout authentication={true}>
-                        <AllPosts />
-                    </AuthLayout>
-                )
-
-            },
+          
             {
                 path: "/add-post",
                 element: (
